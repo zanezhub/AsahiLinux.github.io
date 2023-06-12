@@ -1,5 +1,5 @@
 ---
-title: About
+title: Acerca de
 date:  "2021-01-05T20:00:00+09:00"
 draft: false
 ---
@@ -54,20 +54,18 @@ No, Apple todavía tiene el control sobre el proceso de inicialización (boot) y
 
 Asahi Linux es una comunidad y todos están invitados a colaborar. Si estás interesado revisar nuestra [página de contribución](/contribute-es). Los contribuidores más destacados son:
 
-* [Hector Martin "marcan"](https://github.com/marcan), el líder el proyecto. marcan es alguien muy experimento en la ingeniería inversa y también un desarrollador con más de 15 años de experiencia en *portear* Linux y en ejecutar software no oficial en sistemas sin documentación y/o sistemas cerrados. Este es su proyecto más ambicioso hasta la fecha, y este proyecto está siendo financiado gracias a las [donaciones y patrocinio de la comunidad](/support-es). Sus proyectos anteriores incluyen PS4 Linux
+* [Hector Martin "marcan"](https://github.com/marcan), el líder el proyecto. marcan es alguien muy experimento en la ingeniería inversa y también un desarrollador con más de 15 años de experiencia en *portear* Linux y en ejecutar software no oficial en sistemas sin documentación y/o sistemas cerrados. Este es su proyecto más ambicioso hasta la fecha, y este proyecto está siendo financiado gracias a las [donaciones y patrocinio de la comunidad](/support-es). Sus proyectos anteriores incluyen [PS4 Linux](https://github.com/fail0verflow/ps4-linux), un port de Linux al hardware propietario del PS4, capaz de aceleración completa en 3D usando OpenGL y Vulkan (drivers de radeon/amdgpu); [AsbestOS](https://github.com/marcan/asbestos), un bootlooader de Linux para GameOS, un kernel con parches que trata de hacer que Linux funcionara en la PS3 Slim; y numerosas contribuciones a [Wii Homebrew ecosystem](https://wiibrew.org/), formando parte del equipo que desarrolló [The Homebrew Channel](https://wiibrew.org/wiki/Homebrew_Channel) y [BootMii](https://wiibrew.org/wiki/BootMii), documentando la mayor parte del hardware, y contribuyendo a herramientras de homebrew.
 
-*  His previous projects include [PS4 Linux](https://github.com/fail0verflow/ps4-linux), a Linux port to the proprietary hardware found on the PS4, capable of full 3D acceleration using OpenGL and Vulkan (radeon/amdgpu drivers); [AsbestOS](https://github.com/marcan/asbestos), a PS3 Linux bootloader for GameOS mode, and associated kernel patches to make Linux work on the PS3 Slim; and numerous contributions to the [Wii Homebrew ecosystem](https://wiibrew.org/), including being part of the team that developed [The Homebrew Channel](https://wiibrew.org/wiki/Homebrew_Channel) and [BootMii](https://wiibrew.org/wiki/BootMii), documenting much of the hardware, and contributing to open homebrew SDK tooling.
+* [Alyssa Rosenzweig](https://rosenzweig.io/), la líder de desarrollo de la GPU. Alyssa es una hacker de gráficos de Linux conocida por hacerle ingeniería inversa a las GPUs de Arm Mali para crear el free Panfrost driver. Es una desarrolladora de Mesa3D, le da mantenimiento a Panfrost y los drivers de Mesa para Asahi.
 
-* [Alyssa Rosenzweig](https://rosenzweig.io/), the Asahi GPU lead. Alyssa is a Linux graphics hacker known for her work on reverse-engineering the Arm Mali GPUs to build the free Panfrost driver. She is an upstream Mesa3D developer, maintaining both the Panfrost and Asahi Mesa drivers.
+* [Asahi Lina](https://github.com/asahilina), nuestra maga del GPU. Lina se unió al equipo para hacerle ingeniería inversa al GPU interfaz del kernel del chip M1, creó el primer driver para GPU del mundo hecho en Rust para el kernel de Linux. Cuando no está trabajando en crear drivers para Asahi, está modificando herramientas de código abierto e infraestructura para VTubers.
 
-* [Asahi Lina](https://github.com/asahilina), our GPU kernel sourceress. Lina joined the team to reverse engineer the M1 GPU kernel interface, and found herself writing the world's first Rust Linux GPU kernel driver. When she's not working on the Asahi DRM kernel driver, she sometimes hacks on open source VTuber tooling and infrastructure.
+* [Dougall Johnson "dougallj"](https://github.com/dougallj), genio de la arquitectura y conjunto de instrucciones. Dougall le hizo ingeniería inversa al conjunto de instrucciones que tienen las GPU de Apple y analizó la sincronización de los núcleos de la CPU de Apple M1 para entender cómo funciona los pequeños detalles micro arquitectónicos. 
 
-* [Dougall Johnson "dougallj"](https://github.com/dougallj), instruction set architecture extraordinaire. Dougall reverse-engineered much of the instruction set of the Apple GPU and has analyzed the timing of the Apple M1's CPU cores to infer microarchitectural details.
+*  [Sven Peter](https://github.com/svenpeter42). Sven ha trabajado sin descanso para lograr que Linux pudiese soportar la tabla de resolución de direcciones de dispositivos (DART) de Apple requerida por la entrada USB, PCIe, Ethernet, y Wi-Fi. También añadió soporte para el gadget USB de m1n1, y ahora está trabajando en los puertos de pantalla y Thunderbolt.
 
-* [Sven Peter](https://github.com/svenpeter42). Sven has worked tirelessly on upstream Linux support for Apple's Device Address Resolution Table (DART) required for USB, PCIe, Ethernet, and Wi-Fi. He also added USB gadget support to m1n1, and is now working on DisplayPort and Thunderbolt support.
+* [Mark Kettenis](https://github.com/kettenis), desarrollador de OpenBSD. Mark escribió m1n1 y los drivers U-Boot para los periféricos principales de M1, incluyendo el trabajo necesario para PCIe y NVMe (ANS). Mark también ha escrito drivers para OpenBSD para el Apple M1 como un esfuerzo paralelo para un port de Linux.
 
-* [Mark Kettenis](https://github.com/kettenis), OpenBSD developer. Mark has written m1n1 and U-Boot drivers for the Apple M1 core peripherals, including the bringup needed for PCIe and NVMe (ANS). Mark has also written OpenBSD drivers for the Apple M1 as a parallel effort to the Linux port.
+* [Martin Povišer](https://github.com/povik/), tiene el liderazgo del driver del audio para nuestro kernel. Martin también escribió y publicó los drivers de audio SoC, también escribió drivers para codecs propietarios de Apple.
 
-* [Martin Povišer](https://github.com/povik/), who is leading our audio kernel driver effort. Martin wrote and is upstreaming the Apple-specific SoC audio drivers as well as drivers for Apple-proprietary codecs and codec variants.
-
-* [Janne Grunau](https://github.com/jannau), who implemented touchpad/keyboard support for the M1 series and is now maintaining the display controller (DCP) driver. He has also been involved in countless other bits and pieces, including device tree cleanup and submission.
+* [Janne Grunau](https://github.com/jannau), implementó soporte para el touchpad/teclado para la serie M1 y ahora está dándole mantenimiento al controlador de pantalla (DCP). También ha estado involucrado en innumerables otras partes, incluida la limpieza del código y envío del proyecto.
